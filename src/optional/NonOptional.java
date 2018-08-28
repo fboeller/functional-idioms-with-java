@@ -2,45 +2,33 @@ import java.util.Optional;
 
 public class NonOptional {
 
-    class Car {
-	private final String name;
-
-	public Car(String name) {
-	    this.name = name;
-	}
-
-	public String getName() {
-	    return this.name;
-	}
+    interface User {
+	/**
+	 * Returns the middle name of the user.
+	 * Returns null, if the user does not have a middle name.
+	 */
+	public String getMiddleName();
     }
 
-    class User {
-	private final int id; 
-	private final Car car;
-	
-	public User(int id, Car car) {
-	    this.id = id;
-	    this.car = car;
-	}
-
-	public Car getCar() {
-	    return this.car;
-	}
-	
-    }
-
-    public static String getUserCarName_NoNullChecks(User user) {
-	return user.getCar().getName();
-    }
-
-    public static String getUserCarName_NullChecks(User user) {
-	if (user != null) {
-	    Car car = user.getCar();
-	    if (car != null) {
-		return car.getName();
-	    }
-	}
+    /**
+     * Searches for the user with the given id.
+     * Returns null, if no user with the given id exists.
+     */
+    public static User findUser(int id) {
+	// Some actual search
 	return null;
+    }
+
+    public static String getUserMiddleName_NoNullChecks(int id) {
+	return findUser(id).getMiddleName();
+    }
+
+    public static String getUserMiddleName_NullChecks(int id) {
+	User user = findUser(id);
+	if (user == null) {
+	    return null;
+	}
+	return user.getMiddleName();
     }
 
 }

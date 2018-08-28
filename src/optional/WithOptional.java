@@ -2,50 +2,28 @@ import java.util.Optional;
 
 public class WithOptional {
 
-    class Car {
-	private final Optional<String> name;
-
-	public Car(String name) {
-	    this.name = Optional.ofNullable(name);
-	}
-
-	public Optional<String> getName() {
-	    return this.name;
-	}
+    interface User {
+	public Optional<String> getMiddleName();
     }
 
-    class User {
-	private final int id; 
-	private final Optional<Car> car;
-	
-	public User(int id, Car car) {
-	    this.id = id;
-	    this.car = Optional.ofNullable(car);
-	}
-
-	public Optional<Car> getCar() {
-	    return this.car;
-	}
-	
-    }
-
-    // No!
-    public static Optional<String> getUserCarName_WTF(User user) {
-	Optional<User> maybeUser = Optional.ofNullable(user);
-	if (maybeUser.isPresent()) {
-	    Optional<Car> maybeCar = maybeUser.get().getCar();
-	    if (maybeCar.isPresent()) {
-		return maybeCar.get().getName();
-	    }
-	}
+    public static Optional<User> findUser(int id) {
+	// Some actual search
 	return Optional.empty();
     }
 
+    // No!
+    public static Optional<String> getUserMiddleName_WTF(int id) {
+	Optional<User> maybeUser = findUser(id);
+	if (!maybeUser.isPresent()) {
+	    return Optional.empty();
+	}
+	return maybeUser.get().getMiddleName();
+    }
+
     // Yes!
-    public static Optional<String> getUserCarName_Optional(User user) {
-	return Optional.ofNullable(user)
-	    .flatMap(User::getCar)
-	    .flatMap(Car::getName);
+    public static Optional<String> getUserMiddleName_Optional(int id) {
+	return findUser(id)
+	    .flatMap(User::getMiddleName);
     }
 
 }
