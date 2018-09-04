@@ -1,5 +1,7 @@
 public class ClassCreation {
 
-    interface 
+    interface Event {
+	
+    }
     
 }

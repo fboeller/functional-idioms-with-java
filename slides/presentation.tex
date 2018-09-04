@@ -1,0 +1,98 @@
+\documentclass{beamer}
+
+\input{theme}
+
+\input{config}
+
+\input{commands}
+
+\begin{document}
+
+\AtBeginSection[]{
+  \begin{frame}
+    \frametitle{Overview}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame} 
+}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overview}
+  \tableofcontents[hideothersubsections]
+\end{frame}
+
+\section{Optionals}
+
+\codeslide{Null usage}{optional/NonOptionalIncorrect.java}
+
+\codeslide{Null usage}{optional/NonOptional.java}
+
+\codeslide{With Optional}{optional/WithOptionalBad.java}
+
+\codeslide{With Optional}{optional/WithOptional.java}
+
+\codeslide{Without Null}{optional/WithoutNull.java}
+
+\codeslide{Interacting with legacy code}{optional/LegacyAPIs.java}
+
+\section{Either}
+
+\codeslide{Checked Exceptions vs. Lambdas}{optional/CheckedExceptionsProblem.java}
+
+\codeslide{Either to the rescue}{either/CheckedExceptionsProblemSolved.java}
+
+\section{Streams}
+
+\slide{Finitely representable}{finitely_representable}
+
+\slide{Finitely representable}{finitely_representable_examples}
+
+\codeslide{The problem with finite lists}{stream/infinite/Primenumbers.java}
+
+\codeslide{How infinite lists can help us}{stream/infinite/PrimenumbersWithStreams.java}
+
+\section{Monads}
+
+\slide{Functors}{map_examples}
+
+\slide{Functor properties}{functor_property}
+
+\slide{Definition}{monad_definition}
+
+\slide{Of Examples}{of_examples}
+
+\slide{Flatten Examples}{flatten_examples}
+
+\slide{Monad Examples}{monad_examples}
+
+\section{Mutability}
+
+\codeslide{Mutable bank account}{object_orientation/Mutable.java}
+
+\codeslide{The problem with mutability}{object_orientation/MutableProblem.java}
+
+\codeslide{Immutable bank account}{object_orientation/Immutable.java}
+
+\codeslide{Immutability to the rescue}{object_orientation/ImmutableToTheRescue.java}
+
+\section{Easy class creation vs. easy method creation}
+
+\codeslide{Interfaces}{easy_class_vs_method/Hierarchie.java}
+
+\codeslide{Method Extension Problem}{easy_class_vs_method/MethodExtensionProblem.java}
+
+\codeslide{Sleep as a function}{easy_class_vs_method/SleepAsFunction.java}
+
+\codeslide{Sleep as a function}{easy_class_vs_method/SleepAsFunction.kt}
+
+\section{Implementation Inheritance}
+
+\appendix
+\backupbegin
+
+\backupend
+
+\end{document} 
