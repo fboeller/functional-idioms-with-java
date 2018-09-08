@@ -24,6 +24,26 @@
   \tableofcontents[hideothersubsections]
 \end{frame}
 
+\section{Pure functions}
+
+\codeslide{Unpure function}{pure_functions/side_effects_bad.java}
+
+\codeslide{Removing side effect}{pure_functions/side_effects_good.java}
+
+\codeslide{Removing modification of input}{pure_functions/eventCollector.java}
+
+\codeslide{Simplifying}{pure_functions/eventCollector_better.java}
+
+\codeslide{Removing non-determinism}{pure_functions/random.java}
+
+\codeslide{Simplifying}{pure_functions/random_better.java}
+
+\codeslide{Testing}{pure_functions/Testing.java}
+
+\codeslide{Simplifying}{pure_functions/Usage.java}
+
+// Exception: Logging
+
 \section{Optionals}
 
 \codeslide{Null usage}{optional/NonOptionalIncorrect.java}
@@ -46,6 +66,12 @@
 
 \section{Streams}
 
+\codeslide{Using the Stream API}{stream/Example.java}
+
+// forEach-BAD slide
+
+\subsection{Infinite streams}
+
 \slide{Finitely representable}{finitely_representable}
 
 \slide{Finitely representable}{finitely_representable_examples}
@@ -54,7 +80,7 @@
 
 \codeslide{How infinite lists can help us}{stream/infinite/PrimenumbersWithStreams.java}
 
-\section{Monads}
+\section{The evil 'M'-word}
 
 \slide{Functors}{map_examples}
 
@@ -65,6 +91,8 @@
 \slide{Of Examples}{of_examples}
 
 \slide{Flatten Examples}{flatten_examples}
+
+// Monad properties
 
 \slide{Monad Examples}{monad_examples}
 
@@ -78,6 +106,9 @@
 
 \codeslide{Immutability to the rescue}{object_orientation/ImmutableToTheRescue.java}
 
+\appendix
+\backupbegin
+
 \section{Easy class creation vs. easy method creation}
 
 \codeslide{Interfaces}{easy_class_vs_method/Hierarchie.java}
@@ -88,10 +119,7 @@
 
 \codeslide{Sleep as a function}{easy_class_vs_method/SleepAsFunction.kt}
 
-\section{Implementation Inheritance}
-
-\appendix
-\backupbegin
+// Implementation Inheritance
 
 \backupend
 

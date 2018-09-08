@@ -6,8 +6,8 @@ List.of("abc","d","ef")
             try {
                 return doAwesomeThing(str);
             } catch (IOException ex) {
-                // Puuh...
+                // throw new RuntimeException(ex); ?
+		// Ignore ?
             }
         }
     );
-}

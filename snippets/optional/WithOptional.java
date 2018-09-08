@@ -1,11 +1,9 @@
 interface User { Optional<String> getMiddleName(); }
 
 public static Optional<User> findUser(int id) {
-    if (id == 42) {
-        return Optional.of(/* ... */);
-    } else {
-        return Optional.empty();
-    }
+    return id == 42
+	? Optional.of(/* ... */)
+	: Optional.empty();
 }
 
 public static Optional<String> getUserMiddleName(int id) {
