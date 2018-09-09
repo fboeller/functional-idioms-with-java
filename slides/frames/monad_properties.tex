@@ -1,0 +1,5 @@
+\begin{align*}
+  \onslide<+->{flatten(map(f, of(v))) & = f(v)} \\
+  \onslide<+->{flatten(map(of, m)) & = m} \\
+  \onslide<+->{flatten(map(g, flatten(map(f, m)))) & = flatten(map(x \to flatten(map(g, f(x))), m))}
+\end{align*}
