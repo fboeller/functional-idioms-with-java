@@ -1,6 +1,7 @@
-public static String doAwesomeThing(String str) throws IOException { /* ... */ }
+static String doAwesomeThing(String str)
+    throws IOException { /* ... */ }
 
-List.of("abc","d","ef")
+Arrays.asList("abc","d","ef")
     .stream()
     .map(str -> {
             try {

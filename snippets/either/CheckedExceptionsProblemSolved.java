@@ -1,6 +1,7 @@
-public static Either<String, IOException> doAwesomeThing(String str) { /* ... */ }
+static Either<String, IOException>
+    doAwesomeThing(String str) { /* ... */ }
 
-List.of("abc","d","ef")
+Arrays.asList("abc","d","ef")
     .stream()
     .map(str -> doAwesomeThing(str))
     .filter(either -> either.isLeft());

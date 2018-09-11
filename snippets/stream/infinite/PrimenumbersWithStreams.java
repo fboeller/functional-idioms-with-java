@@ -4,9 +4,9 @@ public static IntStream primenumbers() {
         .filter(x -> isPrime(x));
 }
 
-public static IntStream primenumbersWithPredicate
-    (Predicate<Integer> p, int n) {
+public static IntStream onlyAwesomePrimenumbers
+    (Predicate<Integer> isAwesome, int n) {
     return primenumbers()
-        .filter(p)
+        .filter(isAwesome)
         .limit(n);
 }

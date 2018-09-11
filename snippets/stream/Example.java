@@ -1,4 +1,5 @@
-public static Map<User, Integer> findFriendsAverageAgeOfUsersWithNameHeinz(List<User> users) {
+public static Map<User, Double>
+    findFriendsAverageAgeOfUsersWithNameHeinz(List<User> users) {
     return users
         .stream()
         .filter(user -> user.getName().equals("Heinz"))
@@ -8,6 +9,6 @@ public static Map<User, Integer> findFriendsAverageAgeOfUsersWithNameHeinz(List<
                       .getFriends()
                       .stream()
                       .map(friend -> friend.getAge())
-                      .collect(averagingInt())
+                      .collect(averagingInt(age -> age))
         ));
 }

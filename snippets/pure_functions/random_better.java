@@ -1,4 +1,4 @@
-public static User createUser(String name, UUID uuid) {
+static User createUser(String name, UUID uuid) {
     User user = new User();
     /* Some complex setup */
     user.setId(uuid);
@@ -6,8 +6,8 @@ public static User createUser(String name, UUID uuid) {
     return user;
 }
 
-public static void main(String... args) {
+@Test
+public void testUserCreation() {
     User user = createUser("Heinz", randomUUID());
-    eventCollector.addAll(/* Some events */);
-    userDAO.save(user);
+    assertEquals("Heinz", user.getName());
 }

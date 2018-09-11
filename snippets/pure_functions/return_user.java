@@ -1,17 +1,15 @@
-static void createUser(String name, EventCollector collector) {
+static User createUser(String name, EventCollector collector) {
     User user = new User();
     /* Some complex setup */
     user.setId(randomUUID());
     user.setName(name);
-    userDAO.save(user);
     collector.addAll(/* Some events */);
+    return user;
 }
 
 @Test
 public void testUserCreation() {
-    // Mock UserDAO here
     EventCollector eventCollector = new EventCollector();
-    createUser("Heinz", eventCollector);
-    // Retrieve User here
+    User user = createUser("Heinz", eventCollector);
     assertEquals("Heinz", user.getName());
 }

@@ -1,4 +1,4 @@
-public static Pair<User, List<Event>> createUser(String name) {
+static Pair<User, List<Event>> createUser(String name) {
     User user = new User();
     /* Some complex setup */
     user.setId(randomUUID());
@@ -6,9 +6,8 @@ public static Pair<User, List<Event>> createUser(String name) {
     return Pair.of(user, /* Some events */);
 }
 
-public static void main(String... args) {
-    EventCollector eventCollector = new EventCollector();
+@Test
+public void testUserCreation() {
     Pair<User, List<Event>> pair = createUser("Heinz");
-    eventCollector.addAll(pair.right());
-    userDAO.save(pair.left());
+    assertEquals("Heinz", user.getName());
 }

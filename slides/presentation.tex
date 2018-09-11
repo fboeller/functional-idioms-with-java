@@ -26,49 +26,37 @@
 
 \section{Pure functions}
 
-\codeslide{Impure function}{pure_functions/side_effects_bad.java}
+\animatedcodeslide{Impure function}{pure_functions/side_effects_bad.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{2-5}\btLstHL<3>{6}\btLstHL<4>{7}\btLstHL<5>{10-17}\btLstHL<6>{6,12}}}
 
-\codeslide{Removing side effects}{pure_functions/side_effects_good.java}
+\animatedcodeslide{Removing side effects}{pure_functions/side_effects_good.java}
+                  {linebackgroundcolor={\btLstHL<2>{1,12}}}
 
-\codeslide{Removing modification of input}{pure_functions/eventCollector.java}
+\animatedcodeslide{Return user}{pure_functions/return_user.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,7,13}\btLstHL<2>{1,6,12}}}
 
-\codeslide{Simplifying}{pure_functions/eventCollector_better.java}
+\animatedcodeslide{Removing modification of input}{pure_functions/eventCollector.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,6,11}}}
 
-\codeslide{Removing non-determinism}{pure_functions/random.java}
+\animatedcodeslide{Simplifying}{pure_functions/eventCollector_better.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,6,11}\btLstHL<2>{4}}}
 
-\codeslide{Simplifying}{pure_functions/random_better.java}
+\animatedcodeslide{Simplifying}{pure_functions/random_better.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,4,11}}}
 
-\codeslide{Testing}{pure_functions/Testing.java}
+\animatedcodeslide{Documentation by signature}{pure_functions/Signatures.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}\btLstHL<3>{5}}}
 
-\codeslide{Documentation by signature}{pure_functions/Signatures.java}
-
-\codeslide{Usage in Stream API}{pure_functions/Usage.java}
-
-\section{Optionals}
-
-\codeslide{Null usage}{optional/NonOptionalIncorrect.java}
-
-\codeslide{Null usage}{optional/NonOptional.java}
-
-\codeslide{With Optional}{optional/WithOptionalBad.java}
-
-\codeslide{With Optional}{optional/WithOptional.java}
-
-\codeslide{Without Null}{optional/WithoutNull.java}
-
-\codeslide{Interacting with legacy code}{optional/LegacyAPIs.java}
-
-\section{Either}
-
-\codeslide{Checked Exceptions vs. Lambdas}{optional/CheckedExceptionsProblem.java}
-
-\codeslide{Either to the rescue}{either/CheckedExceptionsProblemSolved.java}
+\animatedcodeslide{Usage in Stream API}{pure_functions/Usage.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-5}\btLstHL<2>{7,8}}}
 
 \section{Streams}
 
-\codeslide{Working on a list the traditional way}{stream/Example_bad.java}
+\animatedcodeslide{Working on a list the traditional way}{stream/Example_bad.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,2}\btLstHL<2>{3,14}\btLstHL<3>{4}\btLstHL<4>{5}\btLstHL<5>{6-9}\btLstHL<6>{10}\btLstHL<7>{11}}}
 
-\codeslide{Using the Stream API}{stream/Example.java}
+\animatedcodeslide{Using the Stream API}{stream/Example.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,2}\btLstHL<2>{3,4}\btLstHL<3>{5}\btLstHL<4>{6}\btLstHL<5>{7}\btLstHL<6>{8-10}\btLstHL<7>{11}\btLstHL<8>{12}}}
 
 \codeslide{Using the Stream API badly}{stream/Example_bad_foreach.java}
 
@@ -76,11 +64,39 @@
 
 \slide{Finitely representable}{finitely_representable_examples}
 
-\codeslide{The problem with finite lists}{stream/infinite/Primenumbers.java}
+\animatedcodeslide{The problem with finite lists}{stream/infinite/Primenumbers.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3,4}\btLstHL<3>{5-8}}}
 
-\codeslide{A solution without infinite streams}{stream/infinite/PrimenumbersWithoutInfinity.java}
+\animatedcodeslide{A solution without infinite streams}{stream/infinite/PrimenumbersWithoutInfinity.java}
+                  {linebackgroundcolor={\btLstHL<1>{6,15}\btLstHL<2>{7}\btLstHL<3>{8-12}\btLstHL<4>{5,8,13}}}
 
-\codeslide{How infinite lists can help us}{stream/infinite/PrimenumbersWithStreams.java}
+\animatedcodeslide{How infinite lists can help us}{stream/infinite/PrimenumbersWithStreams.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-5}\btLstHL<2>{9-11}}}
+
+\section{Optionals}
+
+\animatedcodeslide{Null usage}{optional/NonOptionalIncorrect.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}\btLstHL<3>{5}\btLstHL<4>{6}}}
+
+\animatedcodeslide{Null usage}{optional/NonOptional.java}
+                  {linebackgroundcolor={\btLstHL<1>{6-10}}}
+
+\animatedcodeslide{With Optional}{optional/WithOptional.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3-7}\btLstHL<3>{10-11}}}
+
+\animatedcodeslide{Without Null}{optional/WithoutNull.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-3}\btLstHL<2>{5-6}\btLstHL<3>{8}\btLstHL<4>{10-13}}}
+
+\animatedcodeslide{Interacting with legacy code}{optional/LegacyAPIs.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-3}\btLstHL<2>{5-6}\btLstHL<3>{8-9}\btLstHL<4>{11-12}}}
+
+\section{Either}
+
+\animatedcodeslide{Checked Exceptions vs. Lambdas}{optional/CheckedExceptionsProblem.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{4}\btLstHL<3>{6}\btLstHL<4>{7-12}}}
+
+\animatedcodeslide{Either to the rescue}{either/CheckedExceptionsProblemSolved.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{6}\btLstHL<3>{7}}}
 
 \section{The evil 'M'-word}
 
@@ -100,27 +116,20 @@
 
 \section{Mutability}
 
-\codeslide{Mutable bank account}{object_orientation/Mutable.java}
+\animatedcodeslide{Mutable bank account}{object_orientation/Mutable.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}\btLstHL<3>{5-7}\btLstHL<4>{9-11}}}
 
-\codeslide{The problem with mutability}{object_orientation/MutableProblem.java}
+\animatedcodeslide{The problem with mutability}{object_orientation/MutableProblem.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{4-5}\btLstHL<3>{6}\btLstHL<4>{7-8}}}
 
-\codeslide{Immutable bank account}{object_orientation/Immutable.java}
+\animatedcodeslide{Immutable bank account}{object_orientation/Immutable.java}
+                  {linebackgroundcolor={\btLstHL<1>{3}\btLstHL<2>{5-7}\btLstHL<3>{9-11}\btLstHL<4>{13-15}}}
 
-\codeslide{Immutability to the rescue}{object_orientation/ImmutableToTheRescue.java}
+\animatedcodeslide{Immutability to the rescue}{object_orientation/ImmutableToTheRescue.java}
+                  {linebackgroundcolor={\btLstHL<1>{1,2}\btLstHL<2>{4}\btLstHL<3>{5}\btLstHL<4>{6}}}
 
-\appendix
-\backupbegin
+\section*{Conclusion}
 
-\section{Easy class creation vs. easy method creation}
-
-\codeslide{Interfaces}{easy_class_vs_method/Hierarchie.java}
-
-\codeslide{Method Extension Problem}{easy_class_vs_method/MethodExtensionProblem.java}
-
-\codeslide{Sleep as a function}{easy_class_vs_method/SleepAsFunction.java}
-
-\codeslide{Sleep as a function}{easy_class_vs_method/SleepAsFunction.kt}
-
-\backupend
+\slide{Conclusion}{conclusion}
 
 \end{document} 

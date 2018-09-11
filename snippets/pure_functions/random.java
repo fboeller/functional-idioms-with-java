@@ -1,4 +1,4 @@
-public static User createUser(String name, Supplier<UUID> randomUUID) {
+static User createUser(String name, Supplier<UUID> randomUUID) {
     User user = new User();
     /* Some complex setup */
     user.setId(randomUUID());

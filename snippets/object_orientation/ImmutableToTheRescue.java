@@ -1,4 +1,5 @@
-public static void keepCareOfMyAccount(BankAccount account) { /* ... */ }
+static void keepCareOfMyAccount
+    (BankAccount account) { /* ... */ }
 
 BankAccount account = new BankAccount(0).addSavings(100);
 keepCareOfMyAccount(account);
