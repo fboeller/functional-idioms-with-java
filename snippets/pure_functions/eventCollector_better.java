@@ -6,6 +6,9 @@ static User createUser(String name) {
     return user;
 }
 
+static List<Event> userCreationEvents
+    (User user) { /* Some events */ }
+
 @Test
 public void testUserCreation() {
     User user = createUser("Heinz");
