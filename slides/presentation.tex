@@ -26,6 +26,11 @@
 
 \section{Pure functions}
 
+\animatedcodeslide{Pure functions in the Stream API}{pure_functions/Usage.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-5}\btLstHL<2>{7,8}}}
+
+\slide{Reasons for impurity}{impurity}
+                  
 \animatedcodeslide{Impure function}{pure_functions/side_effects_bad.java}
                   {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{2-5}\btLstHL<3>{6}\btLstHL<4>{7}\btLstHL<5>{10-11}\btLstHL<6>{12}\btLstHL<7>{13}\btLstHL<8>{14}\btLstHL<9>{15}\btLstHL<10>{16}\btLstHL<11>{6,12}}}
 
@@ -50,30 +55,28 @@
 \animatedcodeslide{Documentation by signature}{pure_functions/Signatures.java}
                   {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}\btLstHL<3>{5}}}
 
-\animatedcodeslide{Usage in Stream API}{pure_functions/Usage.java}
-                  {linebackgroundcolor={\btLstHL<1>{1-5}\btLstHL<2>{7,8}}}
-
 \section{Streams}
 
 \animatedcodeslide{Working on a list the traditional way}{stream/Example_bad.java}
                   {linebackgroundcolor={\btLstHL<1>{1,2}\btLstHL<2>{3,14}\btLstHL<3>{4}\btLstHL<4>{5}\btLstHL<5>{6-9}\btLstHL<6>{10}\btLstHL<7>{11}}}
 
+\animatedcodeslide{Using the Stream API badly}{stream/Example_bad_foreach.java}
+                  {linebackgroundcolor={\btLstHL<1>{4,7}}}
+
 \animatedcodeslide{Using the Stream API}{stream/Example.java}
                   {linebackgroundcolor={\btLstHL<1>{1,2}\btLstHL<2>{3,4}\btLstHL<3>{5}\btLstHL<4>{6}\btLstHL<5>{7}\btLstHL<6>{8-10}\btLstHL<7>{11}\btLstHL<8>{12}}}
 
-\codeslide{Using the Stream API badly}{stream/Example_bad_foreach.java}
-
-\slide{Finitely representable}{finitely_representable}
+\slide{List vs. Streams}{finitely_representable}
 
 \slide{Finitely representable}{finitely_representable_examples}
 
-\animatedcodeslide{The problem with finite lists}{stream/infinite/Primenumbers.java}
+\animatedcodeslide{Why infinite lists}{stream/infinite/Primenumbers.java}
                   {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3,4}\btLstHL<3>{5-8}}}
 
 \animatedcodeslide{A solution without infinite streams}{stream/infinite/PrimenumbersWithoutInfinity.java}
-                  {linebackgroundcolor={\btLstHL<1>{6,15}\btLstHL<2>{7}\btLstHL<3>{8-12}\btLstHL<4>{5,8,13}}}
+                  {linebackgroundcolor={\btLstHL<1>{5-15}\btLstHL<2>{6,15}\btLstHL<3>{7}\btLstHL<4>{8-12}\btLstHL<5>{5,8,13}\btLstHL<6>{1}}}
 
-\animatedcodeslide{How infinite lists can help us}{stream/infinite/PrimenumbersWithStreams.java}
+\animatedcodeslide{How infinite streams can help us}{stream/infinite/PrimenumbersWithStreams.java}
                   {linebackgroundcolor={\btLstHL<1>{1-5}\btLstHL<2>{9-11}}}
 
 \section{Optionals}
@@ -82,10 +85,19 @@
                   {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}\btLstHL<3>{5}\btLstHL<4>{6}}}
 
 \animatedcodeslide{Null usage}{optional/NonOptional.java}
-                  {linebackgroundcolor={\btLstHL<1>{6-10}}}
+                  {linebackgroundcolor={\btLstHL<1>{6-10}\btLstHL<2>{1}}}
+
+\animatedcodeslide{With Optional}{optional/WithOptional1.java}
+                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3}}}
+
+\animatedcodeslide{With Optional}{optional/WithOptional2.java}
+                  {linebackgroundcolor={\btLstHL<1>{3}\btLstHL<2>{5}}}
+
+\animatedcodeslide{With Optional}{optional/WithOptional3.java}
+                  {linebackgroundcolor={\btLstHL<1>{5}\btLstHL<2>{6-10}}}
 
 \animatedcodeslide{With Optional}{optional/WithOptional.java}
-                  {linebackgroundcolor={\btLstHL<1>{1}\btLstHL<2>{3-7}\btLstHL<3>{10-11}}}
+                  {linebackgroundcolor={\btLstHL<1>{6-7}}}
 
 \animatedcodeslide{Without Null}{optional/WithoutNull.java}
                   {linebackgroundcolor={\btLstHL<1>{1-3}\btLstHL<2>{5-6}\btLstHL<3>{8}\btLstHL<4>{10-13}}}
@@ -96,10 +108,13 @@
 \section{Either}
 
 \animatedcodeslide{Checked Exceptions vs. Lambdas}{optional/CheckedExceptionsProblem.java}
-                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{4}\btLstHL<3>{6}\btLstHL<4>{7-12}}}
+                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{4}\btLstHL<3>{6}\btLstHL<4>{7-12}\btLstHL<5>{1-2}}}
+
+\animatedcodeslide{Either to the rescue}{either/CheckedExceptionsProblemSolved1.java}
+                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{7-12}}}
 
 \animatedcodeslide{Either to the rescue}{either/CheckedExceptionsProblemSolved.java}
-                  {linebackgroundcolor={\btLstHL<1>{1-2}\btLstHL<2>{6}\btLstHL<3>{7}}}
+                  {linebackgroundcolor={\btLstHL<1>{6}\btLstHL<2>{7}}}
 
 \section{The evil 'M'-word}
 
@@ -107,7 +122,7 @@
 
 \slide{Functor properties}{functor_property}
 
-\slide{Definition}{monad_definition}
+\slide{Definition of a Monad}{monad_definition}
 
 \slide{Of Examples}{of_examples}
 

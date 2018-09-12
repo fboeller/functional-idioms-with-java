@@ -1,5 +1,6 @@
 \begin{align*}
-  \onslide<+->{flatten(map(f, of(v))) & = f(v)} \\
-  \onslide<+->{flatten(map(of, m)) & = m} \\
-  \onslide<+->{flatten(map(g, flatten(map(f, m)))) & = flatten(map(x \to flatten(map(g, f(x))), m))}
+  \onslide<+->{flatten(map(f, of(value))) & = f(value)} \\
+  \onslide<+->{flatten(map(of, monad)) & = monad} \\
+  \onslide<+->{flatten(map(g, flatten(map(f, monad)))) \\
+    = flatten(map(x \to flatten(map(g, f(x))), monad))}
 \end{align*}

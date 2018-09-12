@@ -2,7 +2,7 @@
 static Optional<String>
     toLowercase(Optional<String> str) { /* ... */ }
 
-// input != null and output !=null
+// input != null and output != null
 static String toLowercase(String str) { /* ... */ }
 
 static Optional<String> readInput() { /* ... */ }
